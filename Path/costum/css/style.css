@@ -1,0 +1,145 @@
+@font-face {
+  font-family: Garamond;
+  src: url("Path/costum/font/EBGaramond-VariableeFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: Canilari;
+  src: url("Path/costum/font/Canilari-Pro.ttf") format("truetype");
+}
+
+#NavPc {
+  position: fixed;
+  z-index: 999;
+  height: 100% !important;
+}
+
+.NavPc {
+  background-color: #00adb5;
+}
+
+.nav a {
+  margin-bottom: 15px;
+}
+
+.nav-link.active {
+  color: #eeeeee;
+  margin-left: 20px;
+  position: relative;
+}
+
+.white::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background-color: #000000;
+}
+.dark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 5px;
+  background-color: #eeeeee;
+}
+.nav-text {
+  margin-left: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#ProfileImg {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  border: 7px solid #393e46;
+  margin-top: 25px !important;
+}
+
+.Nickname {
+  color: black;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.nav-link {
+  color: #03575c;
+}
+.sosmed {
+  padding: 3px 8px;
+  margin: 3px 3px 50px 3px;
+  font-size: 16px;
+  border: 2px solid #222831;
+  border-radius: 50%;
+  color: #222831;
+}
+
+.sosmed:hover {
+  color: white !important;
+  background-color: #393e46 !important;
+  border: 2px solid #393e46;
+  box-shadow: 0 0 15px #393e46;
+}
+
+/* Tombol Night Mode */
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #222831;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moon {
+  color: #f1c40f;
+  margin-top: -3px;
+}
+
+.sun {
+  color: #f39c12;
+  margin-top: -3px;
+}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+/* Tombol Night Mode */
+
+#IntroText h1 {
+  font-family: "Garamond";
+}
+
+/* #TitleHome {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+} */
