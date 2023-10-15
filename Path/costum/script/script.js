@@ -21,7 +21,6 @@ function checkDarkMode() {
     OffcanvasAndroid.style.backgroundColor = "#222831";
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
-    ResumeBackground.style.backgroundColor = "#393E46"; //Warna Background untuk file resume
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -55,6 +54,7 @@ function checkDarkMode() {
     NavPC.style.backgroundColor = "";
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
+    NicknameAndroid.style.color = "";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
