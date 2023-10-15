@@ -6,7 +6,6 @@ const Nickname = document.getElementById("Nickname");
 const NicknameAndroid = document.getElementById("NicknameAndroid");
 const Sosmeds = document.querySelectorAll(".sosmed");
 const OffcanvasAndroid = document.getElementById("offcanvasAndroid");
-const ResumeBackground = document.getElementById("ResumeBackground");
 const TombolCards = document.querySelectorAll(".TombolCard");
 
 // Menyimpan lokal ketika tombol Darkmode aktif sebelumnya
@@ -16,11 +15,24 @@ function checkDarkMode() {
   checkbox.checked = isDarkModeEnabled;
 
   if (isDarkModeEnabled) {
+    document.body.style.backgroundColor = "#393E46";
     CheckboxLabel.style.backgroundColor = "black";
     NavPC.style.backgroundColor = "#222831";
     OffcanvasAndroid.style.backgroundColor = "#222831";
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
+    TombolCards.forEach(function (TombolCard) {
+      //Tombol card file Resume
+      TombolCard.style.color = "#03575c";
+      TombolCard.addEventListener("mouseenter", function () {
+        TombolCard.style.backgroundColor = "#03575c";
+        TombolCard.style.color = "#EEEEEE";
+      });
+      TombolCard.addEventListener("mouseleave", function () {
+        TombolCard.style.backgroundColor = "";
+        TombolCard.style.color = "#03575c";
+      });
+    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -50,11 +62,24 @@ function checkDarkMode() {
       });
     });
   } else {
+    document.body.style.backgroundColor = "";
     CheckboxLabel.style.backgroundColor = "";
     NavPC.style.backgroundColor = "";
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
+    TombolCards.forEach(function (TombolCard) {
+      //Tombol card file Resume
+      TombolCard.style.color = "";
+      TombolCard.addEventListener("mouseenter", function () {
+        TombolCard.style.backgroundColor = "";
+        TombolCard.style.color = "";
+      });
+      TombolCard.addEventListener("mouseleave", function () {
+        TombolCard.style.backgroundColor = "";
+        TombolCard.style.color = "";
+      });
+    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
@@ -99,11 +124,24 @@ checkbox.addEventListener("change", function () {
   localStorage.setItem("darkModeEnabled", isDarkModeEnabled);
 
   if (isDarkModeEnabled) {
+    document.body.style.backgroundColor = "#393E46";
     CheckboxLabel.style.backgroundColor = "black";
     NavPC.style.backgroundColor = "#222831";
     OffcanvasAndroid.style.backgroundColor = "#222831";
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
+    TombolCards.forEach(function (TombolCard) {
+      //Tombol card file Resume
+      TombolCard.style.color = "#03575c";
+      TombolCard.addEventListener("mouseenter", function () {
+        TombolCard.style.backgroundColor = "#03575c";
+        TombolCard.style.color = "#EEEEEE";
+      });
+      TombolCard.addEventListener("mouseleave", function () {
+        TombolCard.style.backgroundColor = "";
+        TombolCard.style.color = "#03575c";
+      });
+    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -130,11 +168,24 @@ checkbox.addEventListener("change", function () {
       });
     });
   } else {
+    document.body.style.backgroundColor = "";
     CheckboxLabel.style.backgroundColor = "";
     NavPC.style.backgroundColor = "";
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
+    TombolCards.forEach(function (TombolCard) {
+      //Tombol card file Resume
+      TombolCard.style.color = "";
+      TombolCard.addEventListener("mouseenter", function () {
+        TombolCard.style.backgroundColor = "";
+        TombolCard.style.color = "";
+      });
+      TombolCard.addEventListener("mouseleave", function () {
+        TombolCard.style.backgroundColor = "";
+        TombolCard.style.color = "";
+      });
+    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
