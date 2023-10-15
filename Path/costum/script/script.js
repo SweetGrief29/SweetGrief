@@ -22,18 +22,6 @@ function checkDarkMode() {
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
     ResumeBackground.style.backgroundColor = "#393E46"; //Warna Background untuk file resume
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "#03575c";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "#03575c";
-        TombolCard.style.color = "#EEEEEE";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "#03575c";
-      });
-    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -54,6 +42,7 @@ function checkDarkMode() {
           navLink.style.color = "#000000";
         }
       });
+
       navLink.addEventListener("mouseleave", function () {
         if (!navLink.classList.contains("active")) {
           navLink.style.backgroundColor = "";
@@ -66,20 +55,6 @@ function checkDarkMode() {
     NavPC.style.backgroundColor = "";
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
-    NicknameAndroid.style.color = "";
-    ResumeBackground.style.backgroundColor = ""; //Warna Background untuk file resume
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
@@ -103,6 +78,7 @@ function checkDarkMode() {
           navLink.style.color = "#000000";
         }
       });
+
       navLink.addEventListener("mouseleave", function () {
         if (!navLink.classList.contains("active")) {
           navLink.style.backgroundColor = "";
@@ -128,19 +104,6 @@ checkbox.addEventListener("change", function () {
     OffcanvasAndroid.style.backgroundColor = "#222831";
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
-    ResumeBackground.style.backgroundColor = "#393E46"; //Warna Background untuk file resume
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "#03575c";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "#03575c";
-        TombolCard.style.color = "#EEEEEE";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "#03575c";
-      });
-    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -158,6 +121,7 @@ checkbox.addEventListener("change", function () {
           navLink.style.color = "#000000";
         }
       });
+
       navLink.addEventListener("mouseleave", function () {
         if (!navLink.classList.contains("active")) {
           navLink.style.backgroundColor = "";
@@ -171,19 +135,6 @@ checkbox.addEventListener("change", function () {
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
-    ResumeBackground.style.backgroundColor = ""; //Warna Background untuk file resume
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-    });
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
@@ -204,6 +155,7 @@ checkbox.addEventListener("change", function () {
           navLink.style.color = "#000000";
         }
       });
+
       navLink.addEventListener("mouseleave", function () {
         if (!navLink.classList.contains("active")) {
           navLink.style.backgroundColor = "";
