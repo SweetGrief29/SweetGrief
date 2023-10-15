@@ -13,14 +13,18 @@
   position: fixed;
   z-index: 999;
   height: 100% !important;
-}
-
-.NavPc {
   background-color: #00adb5;
 }
 
 .nav a {
   margin-bottom: 15px;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+.nav-link:focus {
+  background-color: #eeeeee;
 }
 
 .nav-link.active {
@@ -38,6 +42,17 @@
   width: 5px;
   background-color: #000000;
 }
+
+.white:focus {
+  background-color: #00adb5 !important;
+  color: #000000 !important;
+}
+
+.whiteelse:focus {
+  background-color: #eeeeee !important;
+  color: #000000 !important;
+}
+
 .dark::after {
   content: "";
   position: absolute;
@@ -47,6 +62,12 @@
   width: 5px;
   background-color: #eeeeee;
 }
+
+.dark:focus {
+  background-color: #222831 !important;
+  color: #eeeeee !important;
+}
+
 .nav-text {
   margin-left: 8px;
   font-size: 15px;
@@ -86,6 +107,72 @@
   background-color: #393e46 !important;
   border: 2px solid #393e46;
   box-shadow: 0 0 15px #393e46;
+}
+
+.android-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 17%;
+  height: 100%;
+  background-color: #00adb5;
+  color: #ffffff;
+}
+
+.ResumeContent {
+  margin-left: 250px;
+}
+
+.card-img-top {
+  margin-top: 15px;
+}
+
+.card {
+  background-color: #ececec;
+  width: 15rem;
+  height: 25rem;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title,
+.card-subtitle,
+.card-text {
+  font-family: sans-serif;
+}
+
+.TombolCard {
+  font-family: "Times New Roman", Times, serif;
+  color: #000000;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 2px solid #3e8e91;
+  display: block;
+  width: 118px;
+  margin-bottom: 5px;
+}
+
+.TombolCard:hover {
+  color: #ffffff;
+  background-color: #3e8e91;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  border: 2px solid #ffffff;
+}
+
+.card-footer {
+  position: absolute;
+  align-items: center;
+  background-color: #ececec;
+  border: none;
+  bottom: 0;
+  left: 15px;
 }
 
 /* Tombol Night Mode */
@@ -132,14 +219,72 @@
   transform: translateX(24px);
 }
 
-/* Tombol Night Mode */
-
-#IntroText h1 {
-  font-family: "Garamond";
+@media (min-width: 577px) {
+  #BarAndroid {
+    display: none;
+  }
+  .offcanvas {
+    display: none;
+  }
 }
 
-/* #TitleHome {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-} */
+@media (max-width: 576px) {
+  #NavPc {
+    width: 17%;
+  }
+
+  .white::after,
+  .dark::after,
+  .hapus {
+    display: none;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+  .nav-link.active {
+    color: #eeeeee;
+    margin-left: 0;
+  }
+
+  #ProfileImg {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 4px solid #393e46;
+    margin-top: 25px !important;
+  }
+
+  #BarAndroid {
+    position: relative;
+    z-index: 1;
+    top: -30px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    color: #ffffff;
+    border-radius: 50%;
+    background-color: #393e46;
+  }
+  #tigabar {
+    position: relative;
+    z-index: 2;
+    top: -3px;
+    left: -6px;
+    font-size: 18px;
+  }
+
+  #offcanvasAndroid {
+    width: 200px !important;
+    background-color: #00adb5;
+  }
+
+  #ProfileImgAndroid {
+    top: -10px;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 7px solid #393e46;
+  }
+}
