@@ -23,14 +23,14 @@ function checkDarkMode() {
     NicknameAndroid.style.color = "#EEEEEE";
     TombolCards.forEach(function (TombolCard) {
       //Tombol card file Resume
-      TombolCard.style.color = "#03575c";
+      TombolCard.style.color = "#ffffff";
       TombolCard.addEventListener("mouseenter", function () {
         TombolCard.style.backgroundColor = "#03575c";
         TombolCard.style.color = "#EEEEEE";
       });
       TombolCard.addEventListener("mouseleave", function () {
         TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "#03575c";
+        TombolCard.style.color = "#ffffff";
       });
     });
     Sosmeds.forEach(function (sosmed) {
@@ -132,14 +132,14 @@ checkbox.addEventListener("change", function () {
     NicknameAndroid.style.color = "#EEEEEE";
     TombolCards.forEach(function (TombolCard) {
       //Tombol card file Resume
-      TombolCard.style.color = "#03575c";
+      TombolCard.style.color = "#ffffff";
       TombolCard.addEventListener("mouseenter", function () {
         TombolCard.style.backgroundColor = "#03575c";
         TombolCard.style.color = "#EEEEEE";
       });
       TombolCard.addEventListener("mouseleave", function () {
         TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "#03575c";
+        TombolCard.style.color = "#ffffff";
       });
     });
     Sosmeds.forEach(function (sosmed) {

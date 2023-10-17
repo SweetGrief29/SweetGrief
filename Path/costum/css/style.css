@@ -119,62 +119,6 @@
   color: #ffffff;
 }
 
-.ResumeContent {
-  margin-left: 250px;
-}
-
-.card-img-top {
-  margin-top: 15px;
-}
-
-.card {
-  background-color: #ececec;
-  width: 15rem;
-  height: 25rem;
-  margin-top: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card-title,
-.card-subtitle,
-.card-text {
-  font-family: sans-serif;
-}
-
-.TombolCard {
-  font-family: "Times New Roman", Times, serif;
-  color: #000000;
-  text-decoration: none;
-  font-size: 13px;
-  border-radius: 10px;
-  padding: 5px 10px;
-  border: 2px solid #3e8e91;
-  display: block;
-  width: 118px;
-  margin-bottom: 5px;
-}
-
-.TombolCard:hover {
-  color: #ffffff;
-  background-color: #3e8e91;
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 5px 10px;
-  border: 2px solid #ffffff;
-}
-
-.card-footer {
-  position: absolute;
-  align-items: center;
-  background-color: #ececec;
-  border: none;
-  bottom: 0;
-  left: 15px;
-}
-
 /* Tombol Night Mode */
 .checkbox {
   opacity: 0;
@@ -220,17 +164,113 @@
 }
 
 @media (min-width: 577px) {
-  #BarAndroid {
-    display: none;
-  }
+  #BarAndroid,
   .offcanvas {
     display: none;
+  }
+
+  .ResumeFile {
+    position: absolute;
+    top: 15px;
+    left: 250px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .ProgramLang {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 8px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 300px;
+    margin: 15px;
+  }
+
+  .image-container img {
+    width: 100%;
+    background-size: cover;
+    height: 200px;
+    display: block;
+    border-radius: 20px;
+  }
+
+  .image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
+
+  .overlay-content {
+    text-align: left;
+    margin-left: 15px;
+    color: #fff;
+  }
+
+  .card-date {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+
+  .card-text {
+    width: 270px;
+  }
+
+  .TombolCard {
+    font-family: "Times New Roman", Times, serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 2px solid #3e8e91;
+    display: block;
+    width: 118px;
+    margin-bottom: 5px;
+  }
+
+  .TombolCard:hover {
+    color: #ffffff;
+    background-color: #3e8e91;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 2px solid #ffffff;
+  }
+
+  .Tombols {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 @media (max-width: 576px) {
+  body {
+    overflow-x: hidden;
+  }
   #NavPc {
-    width: 17%;
+    width: 70px;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
   }
 
   .white::after,
@@ -253,6 +293,7 @@
     border-radius: 50%;
     border: 4px solid #393e46;
     margin-top: 25px !important;
+    overflow: hidden;
   }
 
   #BarAndroid {
@@ -286,5 +327,9 @@
     height: 120px;
     border-radius: 50%;
     border: 7px solid #393e46;
+  }
+
+  .ResumeContent {
+    margin-left: 0%;
   }
 }
