@@ -329,7 +329,93 @@
     border: 7px solid #393e46;
   }
 
-  .ResumeContent {
-    margin-left: 0%;
+  .ResumeFile {
+    position: absolute;
+    left: 80px;
+    top: 15px;
+  }
+
+  .image-container {
+    position: relative;
+    width: 235px;
+    margin: 15px;
+  }
+
+  .image-container img {
+    width: 100%;
+    background-size: cover;
+    height: 150px;
+    display: block;
+    border-radius: 20px;
+  }
+
+  .image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 150px;
+    width: 235px;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang semi-transparan */
+    color: #fff; /* Warna teks */
+    padding: 10px;
+    display: block;
+    transition: opacity 0.3s;
+    border-radius: 20px;
+  }
+
+  .overlay-content {
+    text-align: left;
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  .card-date {
+    font-size: 8px;
+    margin-top: -5px;
+  }
+
+  .ProgramLang {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 8px;
+  }
+
+  .card-text {
+    display: none;
+    /* width: 210px;
+    font-size: 15px; */
+  }
+
+  .TombolCard {
+    position: relative;
+    font-family: "Times New Roman", Times, serif;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 2px solid #ffffff;
+    display: block;
+    width: 100px;
+    bottom: -45px;
+  }
+
+  .TombolCard:hover {
+    color: #ffffff;
+    background-color: #3e8e91;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 2px solid #ffffff;
+  }
+
+  .Tombols {
+    display: flex;
+    flex-wrap: wrap-reverse;
   }
 }
