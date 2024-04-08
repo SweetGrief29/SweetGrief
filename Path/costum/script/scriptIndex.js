@@ -6,7 +6,8 @@ const Nickname = document.getElementById("Nickname");
 const NicknameAndroid = document.getElementById("NicknameAndroid");
 const Sosmeds = document.querySelectorAll(".sosmed");
 const OffcanvasAndroid = document.getElementById("offcanvasAndroid");
-const TombolCards = document.querySelectorAll(".TombolCard");
+const Biotext = document.getElementById("Biotext");
+const textDestination = document.getElementById("textDestination");
 
 // Menyimpan lokal ketika tombol Darkmode aktif sebelumnya
 function checkDarkMode() {
@@ -21,19 +22,8 @@ function checkDarkMode() {
     OffcanvasAndroid.style.backgroundColor = "#222831";
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
-
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "#ffffff";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "#03575c";
-        TombolCard.style.color = "#EEEEEE";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "#ffffff";
-      });
-    });
+    Biotext.style.color = "#EEEEEE";
+    textDestination.style.color = "#00adb5";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -69,19 +59,8 @@ function checkDarkMode() {
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
-
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-    });
+    Biotext.style.color = "";
+    textDestination.style.color = "";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
@@ -132,19 +111,8 @@ checkbox.addEventListener("change", function () {
     OffcanvasAndroid.style.backgroundColor = "#222831";
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
-
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "#ffffff";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "#03575c";
-        TombolCard.style.color = "#EEEEEE";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "#ffffff";
-      });
-    });
+    Biotext.style.color = "#EEEEEE";
+    textDestination.style.color = "#00adb5";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
       sosmed.style.backgroundColor = "#03575c";
@@ -177,19 +145,8 @@ checkbox.addEventListener("change", function () {
     OffcanvasAndroid.style.backgroundColor = "";
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
-
-    TombolCards.forEach(function (TombolCard) {
-      //Tombol card file Resume
-      TombolCard.style.color = "";
-      TombolCard.addEventListener("mouseenter", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-      TombolCard.addEventListener("mouseleave", function () {
-        TombolCard.style.backgroundColor = "";
-        TombolCard.style.color = "";
-      });
-    });
+    Biotext.style.color = "";
+    textDestination.style.color = "";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
       sosmed.style.backgroundColor = "";
@@ -219,4 +176,51 @@ checkbox.addEventListener("change", function () {
       });
     });
   }
+});
+
+// Teks yang ingin Anda animasikan
+var text = "Frontend Developer";
+var speed = 80; // Kecepatan mengetik (ms)
+var deleteSpeed = 50; // Kecepatan menghapus (ms)
+var loopDelay = 3000; // Waktu jeda sebelum mengulangi animasi (ms)
+
+// Fungsi untuk mengetik dan menghapus teks secara berulang
+function typeAndDelete() {
+  document.getElementById("textDestination").innerHTML = ""; // Mengosongkan elemen sebelum memulai animasi baru
+  typeWriter(); // Mulai mengetik
+  setTimeout(deleteWriter, text.length * speed + loopDelay); // Tunggu sampai mengetik selesai, lalu mulai menghapus
+}
+
+// Fungsi untuk animasi mengetik
+function typeWriter() {
+  var charIndex = 0;
+  var interval = setInterval(function () {
+    if (charIndex < text.length) {
+      document.getElementById("textDestination").innerHTML +=
+        text.charAt(charIndex);
+      charIndex++;
+    } else {
+      clearInterval(interval); // Hentikan interval setelah mengetik selesai
+    }
+  }, speed);
+}
+
+// Fungsi untuk animasi menghapus
+function deleteWriter() {
+  var charIndex = text.length - 1;
+  var interval = setInterval(function () {
+    if (charIndex >= 0) {
+      var newText = text.substring(0, charIndex);
+      document.getElementById("textDestination").innerHTML = newText;
+      charIndex--;
+    } else {
+      clearInterval(interval); // Hentikan interval setelah menghapus selesai
+      setTimeout(typeAndDelete, loopDelay); // Tunggu sebelum memulai kembali animasi
+    }
+  }, deleteSpeed);
+}
+
+// Mulai animasi ketika dokumen dimuat sepenuhnya
+document.addEventListener("DOMContentLoaded", function () {
+  typeAndDelete();
 });
