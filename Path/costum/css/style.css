@@ -391,7 +391,7 @@
   #NavPc {
     width: 70px;
     position: fixed;
-    height: 100dvh;
+    height: 100vh;
     top: 0;
     bottom: 0;
   }
@@ -477,14 +477,16 @@
   }
 
   #bio {
+    position: absolute;
+    top: 300px;
     font-size: 1.1rem;
     width: 200px;
   }
 
   #photome {
-    position: absolute;
-    top: 50px;
-    left: 160px;
+    position: relative;
+    top: -40px;
+    left: -35px;
     width: 300px;
     height: 300px;
   }
