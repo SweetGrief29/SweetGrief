@@ -8,6 +8,7 @@ const Sosmeds = document.querySelectorAll(".sosmed");
 const OffcanvasAndroid = document.getElementById("offcanvasAndroid");
 const Biotext = document.getElementById("Biotext");
 const textDestination = document.getElementById("textDestination");
+const Photome = document.getElementById("photome");
 
 // Menyimpan lokal ketika tombol Darkmode aktif sebelumnya
 function checkDarkMode() {
@@ -23,6 +24,7 @@ function checkDarkMode() {
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
     Biotext.style.color = "#EEEEEE";
+    Photome.style.filter = "brightness(80%)";
     textDestination.style.color = "#00adb5";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
@@ -60,6 +62,7 @@ function checkDarkMode() {
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
     Biotext.style.color = "";
+    Photome.style.filter = "";
     textDestination.style.color = "";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";
@@ -112,6 +115,7 @@ checkbox.addEventListener("change", function () {
     Nickname.style.color = "#EEEEEE";
     NicknameAndroid.style.color = "#EEEEEE";
     Biotext.style.color = "#EEEEEE";
+    Photome.style.filter = "brightness(80%)";
     textDestination.style.color = "#00adb5";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "#EEEEEE";
@@ -146,6 +150,7 @@ checkbox.addEventListener("change", function () {
     Nickname.style.color = "";
     NicknameAndroid.style.color = "";
     Biotext.style.color = "";
+    Photome.style.filter = "";
     textDestination.style.color = "";
     Sosmeds.forEach(function (sosmed) {
       sosmed.style.color = "";

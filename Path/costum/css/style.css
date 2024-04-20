@@ -193,6 +193,15 @@
     width: 50%;
   }
 
+  .Nama {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  #bio {
+    font-size: 1.2rem;
+  }
+
   #textDestination {
     color: #00adb5;
     font-size: 18px;
@@ -346,6 +355,33 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  .AboutMe {
+    position: absolute;
+    top: 15px;
+    left: 250px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .BorderColumn {
+    border: 4px solid;
+    border-radius: 10px;
+    width: 470px;
+    padding: 15px;
+    margin: 20px;
+  }
+  .progress {
+    background: transparent;
+    border: 2px solid #03575c;
+    padding: 2px;
+  }
+  .progress-bar {
+    background-color: #03575c !important;
+  }
+  .KumpulanSkills {
+    margin-top: 15px;
+  }
 }
 /* ini untuk android */
 @media (max-width: 576px) {
@@ -414,6 +450,43 @@
     height: 120px;
     border-radius: 50%;
     border: 7px solid #393e46;
+  }
+
+  .Biodata {
+    position: absolute;
+    left: 80px;
+    top: 40px;
+  }
+  #textDestination {
+    color: #00adb5;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    border-right: 2px solid; /* Garis imitasi kursor mengetik */
+    padding-right: 1px; /* Jarak antara teks dan kursor */
+    white-space: nowrap; /* Mencegah pemutusan baris teks */
+    overflow: hidden; /* Memastikan teks tidak melewati batas kotak */
+    min-height: 28px;
+    margin-bottom: 15px;
+  }
+
+  .Nama {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  #bio {
+    font-size: 1.1rem;
+    width: 200px;
+  }
+
+  #photome {
+    position: absolute;
+    top: 50px;
+    left: 160px;
+    width: 300px;
+    height: 300px;
   }
 
   .ResumeFile {
@@ -504,5 +577,32 @@
   .Tombols {
     display: flex;
     flex-wrap: wrap-reverse;
+  }
+
+  .AboutMe {
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .BorderColumn {
+    border: 4px solid;
+    border-radius: 10px;
+    width: 235px;
+    padding: 15px;
+    margin: 20px;
+  }
+  .progress {
+    background: transparent;
+    border: 2px solid #03575c;
+    padding: 2px;
+  }
+  .progress-bar {
+    background-color: #03575c !important;
+  }
+  .KumpulanSkills {
+    margin-top: 15px;
   }
 }
