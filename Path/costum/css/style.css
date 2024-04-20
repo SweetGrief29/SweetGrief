@@ -391,7 +391,7 @@
   #NavPc {
     width: 70px;
     position: fixed;
-    height: 100vh;
+    height: 100dvh;
     top: 0;
     bottom: 0;
   }
