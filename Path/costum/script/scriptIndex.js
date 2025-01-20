@@ -184,20 +184,24 @@ checkbox.addEventListener("change", function () {
 });
 
 // Teks yang ingin Anda animasikan
-var text = "Frontend Developer";
-var speed = 80; // Kecepatan mengetik (ms)
+var texts = ["Frontend Developer", "Web3 Enthusiast"]; // Array teks
+var speed = 100; // Kecepatan mengetik (ms)
 var deleteSpeed = 50; // Kecepatan menghapus (ms)
-var loopDelay = 3000; // Waktu jeda sebelum mengulangi animasi (ms)
+var loopDelay = 1500; // Waktu jeda sebelum beralih ke teks berikutnya (ms)
+var textIndex = 0; // Indeks teks saat ini
 
 // Fungsi untuk mengetik dan menghapus teks secara berulang
 function typeAndDelete() {
+  var currentText = texts[textIndex]; // Ambil teks saat ini berdasarkan indeks
   document.getElementById("textDestination").innerHTML = ""; // Mengosongkan elemen sebelum memulai animasi baru
-  typeWriter(); // Mulai mengetik
-  setTimeout(deleteWriter, text.length * speed + loopDelay); // Tunggu sampai mengetik selesai, lalu mulai menghapus
+  typeWriter(currentText); // Mulai mengetik teks saat ini
+  setTimeout(function () {
+    deleteWriter(currentText);
+  }, currentText.length * speed + loopDelay); // Tunggu selesai mengetik sebelum mulai menghapus
 }
 
 // Fungsi untuk animasi mengetik
-function typeWriter() {
+function typeWriter(text) {
   var charIndex = 0;
   var interval = setInterval(function () {
     if (charIndex < text.length) {
@@ -211,7 +215,7 @@ function typeWriter() {
 }
 
 // Fungsi untuk animasi menghapus
-function deleteWriter() {
+function deleteWriter(text) {
   var charIndex = text.length - 1;
   var interval = setInterval(function () {
     if (charIndex >= 0) {
@@ -220,7 +224,8 @@ function deleteWriter() {
       charIndex--;
     } else {
       clearInterval(interval); // Hentikan interval setelah menghapus selesai
-      setTimeout(typeAndDelete, loopDelay); // Tunggu sebelum memulai kembali animasi
+      textIndex = (textIndex + 1) % texts.length; // Beralih ke teks berikutnya
+      setTimeout(typeAndDelete, loopDelay); // Tunggu sebelum memulai teks berikutnya
     }
   }, deleteSpeed);
 }
